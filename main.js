@@ -1,18 +1,21 @@
+// 
 var db_construct = function(){
-	this.mongo = require('mongodb'),	
-	this.Server = this.mongo.Server,
-	this.Db = this.mongo.Db,
-	this.BSON = this.mongo.BSONPure,
+	  this.mongo = require("mongodb"),	
+	  this.BSON = this.mongo.BSONPure;
 
 
-	this.server = new this.Server('localhost', 27017, {auto_reconnect: true});
-	this.db = new this.Db('diet', this.server);
+    this.start = function (server, port, database) {
+	    var server = new this.mongo.Server(server, port, {auto_reconnect: true});
+	    this.db = new this.mongo.Db("diet", this.server);
 
-	this.db.open(function(err, db) {
-			if(!err) { 
-				console.log("Connected to 'diet' database"); }
-	});
-
+	    this.db.open(function(err, db) {
+			    if (!err) { 
+				    console.log("Connected to '" + database + "diet' database"); 
+			    } else {
+			        console.log("Something more useful than this");
+			    }
+	    });  
+    }
 }
 
 var base = base || new db_construct();
