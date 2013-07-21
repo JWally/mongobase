@@ -1,0 +1,17 @@
+{
+    "name": "mongobase",
+    "version": "0.0.1",
+    "private": "true",
+    "description": "quick and dirty way to share a connected mongo object",
+    "contributors": [
+        {
+            "name": "Justin Wolcott",
+            "email": "Justin.W.Wolcott@gmail.com"
+        }
+    ],
+    "main": "main.js",
+    "dependencies": {
+        "mongodb": "*"
+    }
+
+}
