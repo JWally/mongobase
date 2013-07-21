@@ -20,11 +20,7 @@ var db_construct = function(){
       // 3. Open the connection
 	    this.db.open(function(err, db) {
 			    if (!err) { 
-<<<<<<< HEAD
 				      console.log("Connected to '" + database + " database"); 
-=======
-				      console.log("Connected to '" + database + "diet' database"); 
->>>>>>> d214612ca534339f76f5f8960d6a949783579c33
 			    } else {
 			        console.log("Something more useful than this");
 			    }
